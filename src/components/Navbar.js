@@ -15,7 +15,7 @@ function Navbar() {
 		setVisible(!visible);
 	}
 
-	const classname = visible ? "navbar" : "hidden";
+	const classname = visible ? "navbar" : "navbar hidden";
 
 
 	return (
