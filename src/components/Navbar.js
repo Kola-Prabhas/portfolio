@@ -42,11 +42,8 @@ function Navbar() {
 				onClick={handleClick}				
 				className="nav_icon"
 				href="#undefined"
-			>
-				
-				{
-					visible ? <BiArrowToTop /> : <BiArrowToBottom />
-                }
+			>				
+				{ visible ? <BiArrowToTop /> : <BiArrowToBottom /> }
 			</a>
 		</div>
 	)

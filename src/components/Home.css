@@ -1,6 +1,6 @@
 .home {
-	background-color: #45a29e;
-	padding: 10em 0;
+	background-color: #ecf0f1;
+	padding: 5em 0;
 }
 
 .home_content {
@@ -22,6 +22,6 @@
 }
 
 .clr_text {
-	color: #c5c6c7;
+	color: #333333;
 	font-weight: bold;
 }

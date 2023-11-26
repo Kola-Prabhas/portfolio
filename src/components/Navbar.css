@@ -10,7 +10,7 @@ html {
 }
 
 .nav_container {
-	background-color: #101833;
+	background-color: #ecf0f1;
 	position: relative;
 	font-size: 2em;
 	min-height: 70px;
@@ -39,11 +39,11 @@ html {
 
 .nav_link {
 	text-decoration: none;
-	color: #66fcf1;
+	color: #3498db;
 }
 
 .nav_link:hover {
-	color: #c5c6c7;
+	color: #3498db;
 }
 
 .nav_icon {
@@ -51,7 +51,7 @@ html {
 	inset: 24px 10px auto auto;
 
 	text-decoration: none;	
-	color: #66fcf1; 
+	color: #3498db; 
 	
 
 	display: flex;

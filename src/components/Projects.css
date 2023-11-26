@@ -1,0 +1,35 @@
+.projects_wrapper {
+	padding: 3em 0;
+	background-color: #ecf0f1;
+
+	font-size: 2em;
+}
+
+.projects_text {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.projects {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1em 0;
+}
+
+.project_card {
+	width: 300px;
+	padding: 1em 0.5em;
+
+	border: 1px solid black;
+}
+
+.project_title {
+	text-align: center;
+}
+
+
+.project_description {
+	text-align: justify;
+}
