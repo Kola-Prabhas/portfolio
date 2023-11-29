@@ -17,13 +17,7 @@ function About() {
 			<div className="about_content_wrapper">
 				<div className="about_content">
 					I'm passionate about frontend development.I build web applications using React.js, for
-					more details about me have a look at my <a
-						href="../../Prabhas-Resume.pdf"
-						className="resume_link"
-						download
-					>
-					    Resume
-				    </a>.	
+					more details about me have a look at my Resume.
 				</div>
 				<div>
 					Some of my skills includes <ColorText>React</ColorText> <ColorText>Javascript</ColorText> {' '}
@@ -67,7 +61,7 @@ function ColorText({ children }) {
 	)
 }
 
-function DownloadLink({ link, children }) {
+/* function DownloadLink({ link, children }) {
 	return (
 		<a
 			href={link}
@@ -77,7 +71,7 @@ function DownloadLink({ link, children }) {
 			{children}			
 		</a>
 	)
-}
+} */
 
 function SkillCard({ children }) {
 	return (

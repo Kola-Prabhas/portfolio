@@ -11,7 +11,27 @@ function Projects() {
 				various technologies.
 			</div>
 			<div className="projects">
-				<ProjectCard imgUrl="./portfolio.jpg" Title="Portfolio">
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
+					My portfolio is the place that has everything about me. You can find various technologies I use
+					various skills I possess and information to contact me.
+				</ProjectCard>
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
+					My portfolio is the place that has everything about me. You can find various technologies I use
+					various skills I possess and information to contact me.
+				</ProjectCard>
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
+					My portfolio is the place that has everything about me. You can find various technologies I use
+					various skills I possess and information to contact me.
+				</ProjectCard>
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
+					My portfolio is the place that has everything about me. You can find various technologies I use
+					various skills I possess and information to contact me.
+				</ProjectCard>
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
+					My portfolio is the place that has everything about me. You can find various technologies I use
+					various skills I possess and information to contact me.
+				</ProjectCard>
+				<ProjectCard imgUrl="/images/image.jpg" title="Portfolio">
 					My portfolio is the place that has everything about me. You can find various technologies I use
 					various skills I possess and information to contact me.
 				</ProjectCard>
@@ -24,13 +44,13 @@ function Projects() {
 }
 
 
-function ProjectCard({imgUrl, Title, children}) {
+function ProjectCard({imgUrl, title, children}) {
 	return (
 		<div className="project_card">
 			<div className="image_wrapper">
-				<img src={imgUrl} alt="Project" />
+				<img src={imgUrl} alt="Project" className="img" />
 			</div>
-			<h2 className="project_title">{Title}</h2>
+			<h2 className="project_title">{title}</h2>
 			<p className="project_description">{children}</p>
 		</div>
 	);
