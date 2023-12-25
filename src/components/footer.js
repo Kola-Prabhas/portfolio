@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { ThemeContext } from "./Context";
+
 function Footer() {
+	const { theme } = useContext(ThemeContext);
+	
 	return (
-		<div className="footer_wrapper">
+		<div className={`footer_wrapper ${theme.mode === 'dark'? 'footer_wrapper-dk': 'footer_wrapper-lt'}`}>
 			<div id='Contact' className="footer">
 				<h2 className="footer_heading">Contact Me</h2>
 				

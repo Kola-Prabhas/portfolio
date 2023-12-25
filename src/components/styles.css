@@ -1,12 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Playfair+Display:wght@500&family=Roboto:wght@500&display=swap'); */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Roboto:wght@500&display=swap'); */
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Open+Sans&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Roboto:wght@500&display=swap'); */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Open+Sans&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Poppins&family=Roboto:wght@400;500&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Open+Sans&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Poppins&family=Roboto:wght@400;500&family=Source+Sans+3&display=swap');
 
 /* 
@@ -76,6 +67,11 @@ html {
 	--bg-dk-2: #0F0F0F;
 	--bg-dk-3: #171717;
 
+	--text-lt: black;
+	--bg-lt-1: white;
+	--bg-lt-2: #f6eaea7b;
+
+
 	--interactive-1: rgb(85, 83, 255);
 	--interactive-2: #707AFF;
 
@@ -88,7 +84,6 @@ html {
 /* NAVBAR STYLES */
 
 .nav_container {
-	color: #F0F0F0;
 	font-size: 2.5em;
 	font-family:  'Roboto';
 	font-weight: 500;
@@ -101,6 +96,15 @@ html {
 
 }
 
+.nav_container-lt {
+	color: var(--text-lt);
+	background-color: var(--bg-lt-1);
+}
+
+.nav_container-dk {
+	color: #F0F0F0;
+	background-color: #0F0F0F;
+}
 
 .navbar {
 	margin: 0 auto;
@@ -114,7 +118,6 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 .logo {
@@ -132,7 +135,7 @@ html {
 
 .nav_link {
 	text-decoration: none;
-	color: var(--text-clr-lt);	
+	color: inherit;	
 }
 
 .nav_link:hover {
@@ -216,6 +219,77 @@ input:checked {
 }
 
 
+.theme_toggle {
+	position: absolute;
+	right: 75px;
+	top: 11px;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgb(189, 161, 161);
+
+
+	/* background-color: blue; */
+}
+
+.theme_toggle:hover {
+	/* background-color: rgba(59, 130, 246, .5); */
+	opacity: 0.5;
+}
+.theme_toggle input {
+	pointer-events: none;
+	appearance: none;
+	width: 0;
+}
+
+
+
+.moon {
+	position: absolute;
+	transform: scale(0);
+	color: black;
+	transition: transform .5s ease-in-out;
+}
+
+.theme:checked ~ .moon {
+	transform: scale(1) rotate(360deg);
+}
+
+.sun {
+	position: absolute;
+	transition: transform .5s ease-in-out;
+	color: white;
+}
+
+.theme:checked ~ .sun {
+	transform: scale(0) rotate(360deg)
+}
+
+/* .theme:checked~.toggle_wrapper {
+	background-color: dodgerblue;
+
+} */
+
+/* .toggle_wrapper {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background-color: #0F0F0F;
+	z-index: -1;
+
+	box-shadow: 
+	        inset 0 8px 60px rgba(0, 0, 0, .1),
+			inset 0 8px 8px rgba(0, 0, 0, .1),
+			inset 0 -4px 4px rgba(0, 0, 0, .1);
+} */
+
+
 
 
 @media (min-width: 800px) {
@@ -225,6 +299,11 @@ input:checked {
         gap: 5%;
 		border-radius: 999px;
 		border: 1px solid rgb(193, 155, 155);
+	}
+
+	.theme_toggle {
+		right: 30px;
+		top: 20px;
 	}
 
 
@@ -268,6 +347,16 @@ input:checked {
 	padding: 15em 0;
 	color: white;
 } 
+
+.home-dk {
+	color: white;
+	background-color: #0F0F0F;
+}
+
+.home-lt {
+	color: var(--text-lt);
+	background-color: var(--bg-lt-1);
+}
 
 
 
@@ -340,26 +429,39 @@ input:checked {
 	width: 50px;
 	height: 50px;
 	padding: 10px;
-	color: rgb(189, 161, 161);
+	color: white;
 	border-radius: 50%;
-	border: 2px solid rgb(189, 161, 161);
+	border: 2px solid white;
+}
+
+.home_icons-lt > a {
+	color: #0F0F0F;
+	border-color: #0F0F0F;
 }
 
 
 .home_icons > a:hover {
-	color: white;
-	border-color: white;
+	color: rgb(189, 161, 161);
+	border-color: rgb(189, 161, 161);
 }
 
 
 /* ABOUT STYLES */
 
 .about {
-	color: white;
-	background-color: var(--bg-dk-3);
 	font-family: 'Source Sans 3';
 	padding: 5em 0;
 	/* border: 1px solid white; */
+}
+
+.about-lt {
+	color: var(--text-lt);
+	background-color: var(--bg-lt-2);
+}
+
+.about-dk {
+	color: #F0F0F0;
+	background-color: var(--bg-dk-3);
 }
 
 .about-wrapper {
@@ -370,6 +472,7 @@ input:checked {
 }
 
 .about_heading {
+	
 	font-size: 4em;
 	line-height: 1;
 	letter-spacing: -1px;
@@ -395,11 +498,19 @@ input:checked {
 	width: 80%;
 	max-width: 1100px;
 	margin: 0 auto;
-	color: white;
 	/* border: 1px solid  white; */
 	padding: 5em 0;
 }
 
+.skills_wrapper-dk {
+	color: white;
+	background-color: var(--bg-dk-2);
+}
+
+.skills_wrapper-lt {
+	color: var(--text-lt);
+	background-color: var(--bg-lt-1);
+}
 
 .skill_heading {
 	text-align: center;
@@ -447,6 +558,11 @@ input:checked {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
+.progress-lt {
+	background-color: #F0F0F0;
+}
+
 
 .progress span {
 	display: block;
@@ -500,16 +616,23 @@ input:checked {
 
 /* PROJECTS STYLE */
 
-.wrapper {
+.wrapper-dk {
 	background-color: var(--bg-dk-3);
+	color: white;
 }
+
+.wrapper-lt {
+	background-color: var(--bg-lt-2);
+	color: var(--text-lt);
+}
+
+
 
 .projects_wrapper {
 	width: 80%;
 	max-width: 1100px;
 	/* border: 1px solid white; */
 	margin: 0 auto;
-	color: white;
 	padding: 5em 0;
 	/* border: 1px solid white; */
 
@@ -521,13 +644,19 @@ input:checked {
 .project {
 	width: 250px;
 	height: 350px;
-	border: 1px solid #F0F0F0;
+	border: 1px solid #b89090;
 	border-radius: 25px;
 	padding: 1em 0;
 	margin: 0 auto 2em auto;
 	font-size: 2em;
 	transition: scale 0.2s ease-in-out;
 }
+
+.project-lt {
+	background-color: #f5ecec;
+}
+
+
 
 .project:hover {
 	transform: scale(1.01);
@@ -595,6 +724,7 @@ input:checked {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 1px solid #6e6363;
 }
 
 .project_links a:hover {
@@ -634,6 +764,18 @@ input:checked {
 	background-color: #0F0F0F;
 	padding: 5em 0;
 }
+
+.footer_wrapper-dk {
+	background-color: var(--bg-dk-2);
+	color: white;
+}
+
+.footer_wrapper-lt {
+	background-color: white;
+	color: var(--text-lt);
+}
+
+
 .footer {
 	width: 80%;
 	max-width: 1100px;
@@ -708,7 +850,8 @@ form > input[type="text"] {
 
 .footer_button {
 	display: block;	
-	width: min(72%, 648px);
+	/* width: min(72%, 648px); */
+	width: 200px;
 	padding: .5em 0;
 	margin: 10px auto 0;
 	text-decoration: none;

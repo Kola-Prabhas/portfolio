@@ -5,6 +5,9 @@ import { FaRust } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 
+import { useContext } from "react";
+import { ThemeContext } from "./Context";
+
 import './styles.css';
 
 
@@ -14,8 +17,12 @@ import './styles.css';
 
 
 function Skills() {
+	const { theme } = useContext(ThemeContext);
+
 	return (
-		<div className="skills_wrapper" id="Skills">
+		<div className={`skills_wrapper ${theme.mode === 'dark'? 'skills_wrapper-dk': 'skills_wrapper-lt'}`}
+			id="Skills"
+		>
 			<h2 className="skill_heading">My Skills</h2>
 			<div className="skills">
 				<SkillBar name="React" bgColor="#61DAFB" percent={75}>
@@ -45,6 +52,8 @@ function Skills() {
 
 
 function SkillBar(props) {
+	const { theme } = useContext(ThemeContext);
+
 	return (
 		<div className="skill_bar"  >
 			<div className="row">
@@ -52,7 +61,7 @@ function SkillBar(props) {
 				<span className="skill_name   info">{props.name}</span>
 			</div>
 			
-			<div className="progress">
+			<div className={`progress ${theme.mode === 'light'? 'progress-lt': ''}`}>
 				<span style={{width: `${props.percent}%`}}><span style={{ backgroundColor: `${props.bgColor}` }} className="progress_bar"></span></span>
 			</div>
 		</div>

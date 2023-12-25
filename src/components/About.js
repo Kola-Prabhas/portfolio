@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { ThemeContext } from './Context';
 import './styles.css';
 
 
@@ -5,8 +7,12 @@ import './styles.css';
 
 
 function About() {
+	const { theme } = useContext(ThemeContext);
+
 	return (
-		<div className="about" id="About">
+		<div className={`about ${theme.mode === 'dark'? 'about-dk': 'about-lt'}`}
+			id="About"
+		>
 			<div className="about-wrapper">
 				<h2 className="about_heading">About Me</h2>
 				<p className="about_text">👋 Hello, World! I'm [Your Name], a passionate and curious student immersed in the dynamic world of programming and web development.

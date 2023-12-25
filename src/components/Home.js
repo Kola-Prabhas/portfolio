@@ -2,10 +2,15 @@ import "./styles.css";
 import { FaGithub, FaDiscord, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import { useContext } from "react";
+import { ThemeContext } from "./Context";
+
 function Home() {
+	const { theme } = useContext(ThemeContext);
+
 	return (
 		<div
-			className="home"
+			className={`home ${theme.mode === 'dark'? 'home-dk': 'home-lt'}`}
 			id="Home"
 		>
 			<div className="home_content">
@@ -19,7 +24,7 @@ function Home() {
 						challenge my current skills and provide scope for my improvement. Find me on
 					</p>
 
-					<div className="home_icons">
+					<div className={`home_icons ${theme.mode === 'light'? 'home_icons-lt': ''}`}>
 						<a href="#i"><FaGithub size="lg"/></a>
 						<a href="#i"><FaXTwitter size="lg"/></a>
 						<a href="#i"><FaDiscord size="lg"/></a>

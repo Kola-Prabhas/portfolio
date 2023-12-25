@@ -1,5 +1,9 @@
 import { useRef } from "react";
+import { FaRegMoon } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
 
+import { ThemeContext } from "./Context";
+import { useContext } from "react";
 
 import "./styles.css";
 
@@ -9,6 +13,7 @@ const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
 
 function Navbar() {
+	const { theme, handleTheme } = useContext(ThemeContext);
 	const navbar = useRef(null);
 	
 
@@ -23,7 +28,13 @@ function Navbar() {
 	return (
 
 		<>
-			<div className="nav_container">
+			<div className={`nav_container ${theme.mode === 'dark'? 'nav_container-dk': 'nav_container-lt'}`}>
+				<label className="theme_toggle" >
+					<input type='checkbox' className="theme" onClick={() => handleTheme()} />
+					<FaRegMoon className="moon" />
+					<MdSunny className="sun" />
+					<span className="toggle_wrapper"></span>
+				</label>
 
 				<ul className='navbar remove' ref={navbar}>
 					{/* <a className="logo" href="#Home">KPN</a> */}
@@ -45,6 +56,8 @@ function Navbar() {
 				<label className='nav_toggle'>
 					<input type='checkbox' className='toggle' onClick={handleClick}/>
 				</label>
+
+				
 			</div>
 		</>
 	);

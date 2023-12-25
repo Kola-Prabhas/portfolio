@@ -1,17 +1,21 @@
+import { useContext } from "react";
+import { ThemeContext } from "./Context";
 import "./styles.css";
 
 function Projects() {
+	const { theme } = useContext(ThemeContext);
+
 	return (
-		<div className="wrapper">
+		<div className={theme.mode === 'dark'? 'wrapper-dk': 'wrapper-lt'}>
 			<div className='projects_wrapper' id="Projects">
 				<h2 className="project_heading">My Projects</h2>
 				<div className="projects">
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com' />
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
 				</div>
 			</div>
 		</div>
@@ -21,8 +25,10 @@ function Projects() {
 
 
 function Project(props) {
+	const { theme } = useContext(ThemeContext);
+
 	return (
-		<div className="project">
+		<div className={`project ${theme.mode === 'light'? 'project-lt': ''}`}>
 			<div className="project_image_wrapper">
 				<img src={props.src} alt="project" className="project_image" />
 			</div>
