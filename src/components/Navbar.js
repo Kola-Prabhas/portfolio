@@ -1,52 +1,53 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 
-import { BiArrowToBottom } from "react-icons/bi";
-import { BiArrowToTop } from "react-icons/bi";
+import "./styles.css";
 
-import "./Navbar.css";
 
-const links = ["Home", "About", "Projects"];
+
+const links = ["Home", "About", "Skills", "Projects", "Contact"];
+
 
 function Navbar() {
-	const [visible, setVisible] = useState(false);
+	const navbar = useRef(null);
+	
 
 	function handleClick() {
-		setVisible(!visible);
+		navbar.current.classList.toggle('visible');
 	}
 
-	const classname = visible ? "navbar" : "navbar hidden";
 
+
+	
 
 	return (
-		<div className="nav_container">
-			<ul className={classname}>
-				{
-					links.map((link, index) => {
-						return (
-							<li
-								key={index}
-								className="nav_item"
-							>
-								<a href={`#${link}`}
-								className="nav_link"
+
+		<>
+			<div className="nav_container">
+
+				<ul className='navbar remove' ref={navbar}>
+					{/* <a className="logo" href="#Home">KPN</a> */}
+
+					{
+						links.map((link, index) => {
+							return (
+								<li
+									key={index}
+									className="nav_item"
 								>
-										{link}
-									</a>
-							</li>
-						);
-					})
-				} 
-			</ul>
-			<a
-				onClick={handleClick}				
-				className="nav_icon"
-				href="#undefined"
-			>				
-				{ visible ? <BiArrowToTop /> : <BiArrowToBottom /> }
-			</a>
-		</div>
-	)
+									<a href={`#${link}`} className="nav_link">{link}</a>
+								</li>
+							);
+						})
+					}
+				</ul>
+
+				<label className='nav_toggle'>
+					<input type='checkbox' className='toggle' onClick={handleClick}/>
+				</label>
+			</div>
+		</>
+	);
 }
 
 
