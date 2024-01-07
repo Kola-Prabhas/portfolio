@@ -20,8 +20,8 @@ function Projects() {
 					<Project
 						name='Tic-Tac-Toe'
 						src='./images/portfolio.jpg'
-						github='www.github.com'
-						live='www.live.com'
+						github='https://github.com/Kola-Prabhas/tic-tac-toe'
+						live='https://kola-prabhas.github.io/tic-tac-toe/'
 					/>
 					
 				</div>

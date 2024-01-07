@@ -43,7 +43,6 @@ function Skills() {
 				</SkillBar>
 				<SkillBar name="Css3" bgColor={'#4747A5'} percent={78}>
 					<FaCss3 style={{color: '#4747A5'}} />
-
 				</SkillBar>
 			</div>
 		</div>
