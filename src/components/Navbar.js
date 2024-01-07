@@ -53,8 +53,8 @@ function Navbar() {
 					}
 				</ul>
 
-				<label className='nav_toggle'>
-					<input type='checkbox' className='toggle' onClick={handleClick}/>
+				<label className={`nav_toggle ${theme.mode === 'light'? 'nav_toggle-lt': ''}`}>
+					<input type='checkbox' className={`toggle ${theme.mode === 'light'? 'toggle-lt': ''}`} onClick={handleClick}/>
 				</label>
 
 				

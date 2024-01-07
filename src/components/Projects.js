@@ -10,12 +10,14 @@ function Projects() {
 			<div className='projects_wrapper' id="Projects">
 				<h2 className="project_heading">My Projects</h2>
 				<div className="projects">
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
-					<Project name='portfolio' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project
+						name='Portfolio'
+						src='./images/portfolio-img.png'
+						github='https://github.com/Kola-Prabhas/portfolio'
+						live='https://kola-prabhas.github.io/portfolio/'
+					/>
+					<Project name='Tic-Tac-Toe' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					
 				</div>
 			</div>
 		</div>
@@ -27,8 +29,25 @@ function Projects() {
 function Project(props) {
 	const { theme } = useContext(ThemeContext);
 
+	// const observer = new IntersectionObserver((entries, observer) => {
+	// 	entries.forEach(entry => {
+	// 		if (entry.isIntersecting) {
+	// 			entry.target.classList.add('project-show');
+	// 		} else {
+	// 			entry.target.classList.remove('project-show');
+	// 			// observer.unobserve(entry.target);				
+	// 		}
+	// 	});
+
+	// }, {threshold: 0.3});
+
+
+	// const elements = document.querySelectorAll('.project');
+	// elements.forEach(elem => observer.observe(elem));
+
 	return (
-		<div className={`project ${theme.mode === 'light'? 'project-lt': ''}`}>
+		// <div className={`project project-hide ${theme.mode === 'light' ? 'project-lt' : ''}`}>
+		<div className={`project ${theme.mode === 'light' ? 'project-lt' : ''}`}>
 			<div className="project_image_wrapper">
 				<img src={props.src} alt="project" className="project_image" />
 			</div>

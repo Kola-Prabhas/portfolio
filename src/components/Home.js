@@ -25,10 +25,10 @@ function Home() {
 					</p>
 
 					<div className={`home_icons ${theme.mode === 'light'? 'home_icons-lt': ''}`}>
-						<a href="#i"><FaGithub size="lg"/></a>
-						<a href="#i"><FaXTwitter size="lg"/></a>
-						<a href="#i"><FaDiscord size="lg"/></a>
-						<a href="#i"><FaInstagram size="lg"/></a>
+						<a href="#i"><FaGithub /* size="lg" *//></a>
+						<a href="#i"><FaXTwitter /* size="lg" *//></a>
+						<a href="#i"><FaDiscord /* size="lg" *//></a>
+						<a href="#i"><FaInstagram /* size="lg" *//></a>
 					</div>
 				</div>	
 			</div>
