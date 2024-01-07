@@ -649,7 +649,7 @@ input:checked {
 	padding: 1em 0;
 	margin: 0 auto 2em auto;
 	font-size: 2em;
-	transition: all 1s ease-in-out;
+	transition: translate 1s ease-in-out;
 
 }
 
