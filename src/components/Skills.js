@@ -55,16 +55,16 @@ function Skills() {
 function SkillBar(props) {
 	const { theme } = useContext(ThemeContext);
 
-	const observer1 = new IntersectionObserver((entries) => {
+	const observer2 = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 			const classList = entry.target.classList;
 			if (entry.isIntersecting) {
-				// classList.add('pb_animation');
-				classList.add('show');
+				classList.add('pb_animation');
+				// classList.add('show');
 				
 			} else {
-				// classList.remove('pb_animation');
-				classList.remove('show');				
+				classList.remove('pb_animation');
+				// classList.remove('show');				
 			}
 		});
 
@@ -72,15 +72,17 @@ function SkillBar(props) {
 
 
 
-	// const skillBars = document.querySelectorAll('.progress_bar');
-	const skillElems = document.querySelectorAll('.hide');
-	// skillBars.forEach(elem => observer2.observe(elem));
-	skillElems.forEach(elem => observer1.observe(elem));
+	const skillBars = document.querySelectorAll('.progress_bar');
+	// const skillElems = document.querySelectorAll('.hide');
+	skillBars.forEach(elem => observer2.observe(elem));
+	// skillElems.forEach(elem => observer1.observe(elem));
 
 
 
 	return (
-		<div className="skill_bar hide"  >
+		// <div className="skill_bar hide"  >
+		<div className="skill_bar"  >
+
 			<div className="row">
 				<span className="skill_logo">{props.children}</span>
 				<span className="skill_name   info">{props.name}</span>

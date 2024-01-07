@@ -22,7 +22,7 @@ function About() {
 					{/* I believe in the power of clean code and intuitive design to elevate digital interactions. */}<br /><br /> 
 
 					{/* 💻 Beyond the pixels, I delve into the realms of computer science, exploring the intricacies of data structures and algorithms that form the backbone of efficient software. */}
-					{/* Databases, operating systems, and computer networks are not just buzzwords to me—they're the puzzle pieces I eagerly assemble to build robust solutions. */}<br /><br /> 
+					{/* Databases, operating systems, and computer networks are not just buzzwords to me—they're the puzzle pieces I eagerly assemble to build robust solutions. <br /><br /> */}
 
 					🌐 Join me on this coding adventure where each line of code tells a story, and every project is an opportunity to learn and innovate.
 					{/* Let's turn ideas into reality and create a digital landscape that leaves a lasting impression. */}<br /><br /> 
@@ -31,7 +31,6 @@ function About() {
 					Let's connect, code, and make the web a better place together!</p>
 			</div>
 		</div>
-		
 
 	);
 

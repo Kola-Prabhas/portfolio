@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "./Context";
 import "./styles.css";
 
+
 function Projects() {
 	const { theme } = useContext(ThemeContext);
 
@@ -12,11 +13,16 @@ function Projects() {
 				<div className="projects">
 					<Project
 						name='Portfolio'
-						src='./images/portfolio-img.png'
+						src='./images/portfolio.jpg'
 						github='https://github.com/Kola-Prabhas/portfolio'
 						live='https://kola-prabhas.github.io/portfolio/'
 					/>
-					<Project name='Tic-Tac-Toe' src='./images/image.jpg' github='www.github.com' live='www.live.com'/>
+					<Project
+						name='Tic-Tac-Toe'
+						src='./images/portfolio.jpg'
+						github='www.github.com'
+						live='www.live.com'
+					/>
 					
 				</div>
 			</div>
