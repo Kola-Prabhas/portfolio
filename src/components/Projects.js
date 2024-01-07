@@ -12,7 +12,7 @@ function Projects() {
 				<div className="projects">
 					<Project
 						name='Portfolio'
-						src='./images/portfolio-img.png'
+						src='./images/portfolio-img.jpg'
 						github='https://github.com/Kola-Prabhas/portfolio'
 						live='https://kola-prabhas.github.io/portfolio/'
 					/>
