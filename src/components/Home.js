@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../styles/home.css";
 import { FaGithub, FaDiscord, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
