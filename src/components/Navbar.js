@@ -5,7 +5,7 @@ import { MdSunny } from "react-icons/md";
 import { ThemeContext } from "./Context";
 import { useContext } from "react";
 
-import "./styles.css";
+import "../styles/navbar.css";
 
 
 

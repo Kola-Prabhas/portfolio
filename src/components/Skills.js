@@ -7,18 +7,20 @@ import { FaCss3 } from "react-icons/fa";
 
 import { useContext } from "react";
 import { ThemeContext } from "./Context";
+import { useEffect} from "react";
 
 
-import './styles.css';
+import '../styles/skills.css';
 
 
-// const pythonLogo = "public/images/python-5.svg";
 
 
 
 
 function Skills() {
 	const { theme } = useContext(ThemeContext);
+
+	useEffect(AnimateSkillBar, []);
 
 	return (
 		<div className={`skills_wrapper ${theme.mode === 'dark'? 'skills_wrapper-dk': 'skills_wrapper-lt'}`}
@@ -54,33 +56,9 @@ function Skills() {
 function SkillBar(props) {
 	const { theme } = useContext(ThemeContext);
 
-	const observer2 = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			const classList = entry.target.classList;
-			if (entry.isIntersecting) {
-				classList.add('pb_animation');
-				// classList.add('show');
-				
-			} else {
-				classList.remove('pb_animation');
-				// classList.remove('show');				
-			}
-		});
-
-	});
-
-
-
-	const skillBars = document.querySelectorAll('.progress_bar');
-	// const skillElems = document.querySelectorAll('.hide');
-	skillBars.forEach(elem => observer2.observe(elem));
-	// skillElems.forEach(elem => observer1.observe(elem));
-
-
-
 	return (
-		// <div className="skill_bar hide"  >
-		<div className="skill_bar"  >
+		<div className="skill_bar hide"  >
+		{/* <div className="skill_bar"  > */}
 
 			<div className="row">
 				<span className="skill_logo">{props.children}</span>
@@ -97,7 +75,45 @@ function SkillBar(props) {
 }
 
 
+function AnimateSkillBar() {
+	// const observer2 = new IntersectionObserver((entries) => {
+	// 	entries.forEach(entry => {
+	// 		const classList = entry.target.classList;
+	// 		if (entry.isIntersecting) {
+	// 			classList.add('pb_animation');
+	// 			classList.add('show');
 
+	// 		} else {
+	// 			classList.remove('pb_animation');
+	// 			classList.remove('show');				
+	// 		}
+	// 	});
+
+	// });
+
+	const observer1 = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			const classList = entry.target.classList;
+			if (entry.isIntersecting) {
+				// classList.add('pb_animation');
+				classList.add('show');
+
+			} else {
+				// classList.remove('pb_animation');
+				classList.remove('show');
+			}
+		});
+
+	});
+
+
+
+	// const skillBars = document.querySelectorAll('.progress_bar');
+	const skillElems = document.querySelectorAll('.hide');
+	// skillBars.forEach(elem => observer2.observe(elem));
+	skillElems.forEach(elem => observer1.observe(elem));
+
+}
 
 
 export { Skills };

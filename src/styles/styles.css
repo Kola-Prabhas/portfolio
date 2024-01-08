@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@500&family=Open+Sans&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Poppins&family=Roboto:wght@400;500&family=Source+Sans+3&display=swap');
+
+/* 
+Navbar - Roboto
+Headings - Lora
+Home text - Source Sans 3
+About text - Source Sans 3
+Skill Name - Roboto
+form - Montserrat
+*/
+
+
+/* Generic Styles */
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+:root {
+
+
+	--bg-dk-1: #1A202C;
+	--bg-dk-2: #0F0F0F;
+	--bg-dk-3: #171717;
+
+	--text-lt: black;
+	--bg-lt-1: white;
+	--bg-lt-2: #f6eaea7b;
+
+
+	--interactive-1: rgb(85, 83, 255);
+	--interactive-2: #707AFF;
+
+}

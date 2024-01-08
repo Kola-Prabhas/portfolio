@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from './Context';
-import './styles.css';
+import '../styles/about.css';
 
 
 

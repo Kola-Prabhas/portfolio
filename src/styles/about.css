@@ -1,0 +1,43 @@
+@import url('./styles.css');
+
+
+.about {
+	font-family: 'Source Sans 3';
+	padding: 5em 0;
+	/* border: 1px solid white; */
+}
+
+.about-lt {
+	color: var(--text-lt);
+	background-color: var(--bg-lt-2);
+}
+
+.about-dk {
+	color: #F0F0F0;
+	background-color: var(--bg-dk-3);
+}
+
+.about-wrapper {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	/* border: 1px solid white; */
+}
+
+.about_heading {
+
+	font-size: 4em;
+	line-height: 1;
+	letter-spacing: -1px;
+	font-family: 'Lora';
+	text-align: center;
+	margin: 0 0 2em 0;
+	/* border: 1px solid white; */
+}
+
+
+.about_text {
+	font-size: 2em;
+	line-height: 1.5;
+	text-align: justify;
+}
